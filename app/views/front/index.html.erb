@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>San Diego Cocktail Book Project</title>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:url" content="http://snootybird.net/"/>
+  <meta property="og:title" content="Snooty Bird Publishing"/>
+  <meta property="og:description" content="Publishers of traditional and digital media."/>
+  <meta property="og:image" content="<%= asset_url('facebook-link-image.png') %>"/>
+</head>
+<body class="title-body">
+
+	<div class="jumbotron drink-title">
+
+		<div class="navbar navbar-default navbar-transparent" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+		      		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+					</button>
+		      	</div>
+		      	<div class="collapse navbar-collapse" id="navbar-collapse">
+			        <ul class="nav navbar-nav pull-right">
+						<li><a href="http://blog.whatdididrink.com/">Blog</a></li>
+					</ul>
+				</div>
+		    </div>
+		</div>
+
+		<div class="container">
+			<div class="col-xs-6 title-column">
+				<h1 class="h1-title title-color">
+					San Diego<br/>
+					Cocktail Book<br/> 
+					Project
+				</h1>
+				<p class="subtitle">
+					Celebrating the wealth and breadth of San Diego cocktail culture with contributions from area bartenders.
+				</p>
+				<p><%= link_to "Buy the Book!", "http://j.mp/whatwedrinkbook", :class => "btn btn-primary btn-lg", :role => "button" %></p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row rowspace50">
+			<div class="col-md-6 col-md-offset-3">
+				<h2 class="text-center">our vision</h2>
+		
+				<p class="spaced">
+					We think San Diego is a great cocktail town with a huge breadth of interesting
+					people creating and serving up quality drinks.  Unfortunately, except for a couple
+					of the best known spots, we don't think the cocktail culture in this city gets
+					enough of the publicity and acclaim outside of the city as it should.  When 
+					people think of west coast cocktail cities, they think of Portland, San Francisco,
+					Los Angeles and Seattle, and we think it's a shame that San Diego is often missing.
+				</p>
+				
+				<p class="spaced lead">
+					To help address this, we are putting together a high quality cocktail book that
+					features the drinks and people of our city.  
+				</p>
+				
+				<p class="spaced">
+					The book will be professionally done and sold on Amazon and hopefully other retailers.
+					We will balance accessibility between a mainstream audience and the bartending crowd, 
+					featuring lots of high quality drink photography, some basic cocktail making instruction, 
+					and some recipes that are surprising and appeal to an experienced palette.
+				</p>
+				
+				<p class="spaced">
+					We are still working out the overall design, but we expect to borrow concepts from 
+					previous cocktail books, such as <a href="http://www.amazon.com/gp/product/0982631502/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0982631502&linkCode=as2&tag=why07b-20&linkId=SQXP7SIQU662QH2P">Left Coast Libations</a> and 
+					<a href="http://www.amazon.com/gp/product/158008253X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=158008253X&linkCode=as2&tag=why07b-20&linkId=C5JTYX3FB5FZYDRO">Speakeasy</a>.
+				</p>
+				
+				<p class="spaced">
+					This is not our first cocktail book, though it is a bigger undertaking than what we've
+					done before.  Our first book, which you can see below, was designed to be more of a 
+					coffee table book, yet include enough instruction to get newbies off the ground.
+				</p>
+				
+				<div style='width: 100%; margin-top: 30px;'>
+				  <object class='myWidget' data='http://www.blurb.com/assets/embed.swf' height='200' type='application/x-shockwave-flash' width='350'>
+				    <param name='allowFullScreen' value='true' />
+				    <param name='wmode' value='transparent' />
+				    <param name='allowScriptAccess' value='always' />
+				    <param name='movie' value='http://www.blurb.com/assets/embed.swf' />
+				    <param name='FlashVars' value='book_id=4908138&amp;locale=en_US' />
+				    <a href='http://www.blurb.com/books/4908138' target='_new'>
+				      	<img src='http://assets3.blurb.com/images/uploads2/catalog/002/721/821/5290274-3321526b4aea6d4b45327e420147b089.jpg' id="backup-book-image"/>
+				    </a>
+				  </object>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row rowspace50">
+			<div class="col-md-6 col-md-offset-3">
+				<h2 class="text-center">to participate...</h2>
+		
+				<p class="spaced lead">
+					For the book to be a success, we need your contributions!
+				</p>
+				
+				<p class="spaced">
+					We will evaluate all submitted recipes and make rolling decisions as
+					to which will be included in the book, though we expect that most submitted
+					recipes will be included.  If we decide to include your recipe(s), we will
+					reach out to you by e-mail to schedule a photo session and interview.  You
+					will also get to see proofs of any pages including your content, as well as 
+					a final proof when the book is complete before it goes to print.  We hope to 
+					give a complimentary copy of the book to each contributor once it is published,
+					though this will depend on the cost of printing and the book's success.
+				</p>
+
+				<p class="spaced">
+					Click the button below to get started.  We would like to have most 
+					recipes submitted by <strong>June 30, 2014</strong>, but we will
+					consider submissions through the end of the summer.
+				</p>
+								
+				<p class="spaced">
+					If you have any questions, feel free to contact us via 
+					<a href="http://facebook.com/sdcocktailbook">the Facebook page</a> or by 
+					<a href="mailto:jeff@jeffreynichols.com">e-mail</a>.
+				</p>
+			</div>
+		</div>
+		
+		<div class="row rowspace50">
+			<div class="col-md-6 col-md-offset-3 testborder">
+				<h2 class="text-center">the organizers</h2>
+				
+				<p class="text-left spaced">
+					We're cocktail enthusiasts, not bartenders, but you
+					probably wouldn't know it from the amount of time
+					we spend in bars. If you work at a bar, there's a good 
+					chance that we've sat in front of you at least once before.
+				</p>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-3 col-md-offset-2 testborder rowspace50">
+				<%= image_tag "jeff_reasonably_small.jpg", :class => 'bio-image' %>
+				
+				<h5 class="text-center">Jeffrey Nichols</h5>
+				
+				<p>
+					Jeff is research scientist at Google and
+					resident of downtown San Diego.  He will drink
+					anything boozy and bitter, but also enjoys a 
+					well made tiki cocktail.
+				</p>
+			</div>
+			
+			<div class="col-md-3 col-md-offset-2 testborder rowspace50">
+				<%= image_tag "jordan_small.jpg", :class => 'bio-image' %>
+				
+				<h5 class="text-center">Clayton Jordan III</h5>
+				
+				<p>
+					Jordan is a supply chain management expert who
+					works in north county.  He prefers rye whiskey
+					and likes lavender bitter cocktails when he can
+					find them.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer" id="footer">
+		<div class="footer-content container">
+			<div class="col-md-6">
+				<p><small>Copyright &copy; 2014, Snooty Bird, LLC</small></p>
+			</div>
+			<div class="col-md-6 text-right">
+				<p><small>For questions and information, please contact <a href="mailto:jeff@jeffreynichols.com">Jeff</a>.</small></p>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-51633029-1', 'sdcocktailbook.com');
+	  ga('send', 'pageview');
+
+	</script>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+</body>
+</html>

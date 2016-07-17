@@ -1,0 +1,109 @@
+.drink-title {
+	padding-top: 0px;
+	background-color: rgb(66,66,64);
+	background-image: asset-url("title-image-02.png", image);
+	background-repeat: no-repeat;
+	background-size: auto 750px;
+	background-position: center top;
+	min-height: 750px;
+}
+
+.navbar-transparent {
+	background-color: transparent;
+	border: 0px;
+	height: 50px;
+}
+
+.title-body {
+}
+
+.title-column {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.jumbotron {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.title-color {
+	color: rgb(215,227,215) !important;
+}
+
+h1.h1-title {
+	font-size: 45px;
+	padding-top: 20px;
+}
+
+p.subtitle {
+	color: rgb(180,180,180);
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.bird-image {
+	height: 50px;
+}
+
+img.image-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.bio-image {
+	height: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.testborder {
+	border: 5px;
+	border-color: rgb(0,0,0);
+}
+
+div.rowspace100 {
+	padding-top: 100px !important;
+}
+
+div.rowspace75 {
+	padding-top: 75px !important;
+}
+
+div.rowspace50 {
+	padding-top: 50px !important;
+}
+
+div.rowspace25 {
+	padding-top: 25px !important;
+}
+
+.footer {
+	margin-top: 75px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	background-color: rgb(215,227,215);
+	color: rgb(140,140,140);
+}
+
+.footer-content {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.spaced {
+	margin-top: 30px !important;
+}
+
+.smallspaced {
+	margin-top: 10px !important;
+}
+
+#backup-book-image {
+	display: block;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
