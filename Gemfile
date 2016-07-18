@@ -18,6 +18,7 @@ gem 'scrypt'
 
 gem 'bootstrap-sass', '~> 3.1.1.0'
 gem 'sass-rails', '>= 3.2'
+gem 'uglifier'
 
 gem 'jquery-rails'
 

@@ -65,6 +65,7 @@ GEM
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
     erubis (2.7.0)
+    execjs (2.7.0)
     ffi (1.9.14)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -139,6 +140,8 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.51)
+    uglifier (3.0.0)
+      execjs (>= 0.3.0, < 3)
 
 PLATFORMS
   ruby
@@ -160,6 +163,7 @@ DEPENDENCIES
   sass-rails (>= 3.2)
   scrypt
   test-unit
+  uglifier
 
 BUNDLED WITH
    1.12.5
