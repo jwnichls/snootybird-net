@@ -1,17 +1,31 @@
 .drink-title {
 	padding-top: 0px;
-	background-color: rgb(66,66,64);
-	background-image: asset-url("title-image-02.png", image);
-	background-repeat: no-repeat;
-	background-size: auto 750px;
-	background-position: center top;
-	min-height: 750px;
+	background-color: rgb(0,0,0);
+}
+
+.browser-height {
+	height: 100vh !important;
+}
+
+.one-tenth-height {
+	height: 10vh !important;
+}
+
+.one-fifth-height {
+	height: 20vh !important;
 }
 
 .navbar-transparent {
 	background-color: transparent;
 	border: 0px;
 	height: 50px;
+}
+
+.title-text {
+	text-align: center;
+	padding-top: 1em;
+	font-size: 2em !important;
+	color: rgb(119,119,119) !important;
 }
 
 .title-body {
