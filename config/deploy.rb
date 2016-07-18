@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:jwnichls/snootybird-net.git'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, "/home/jwnichls/web/snootybird/snootybirdnet"
+set :deploy_to, "/home/jwnichls/web/snootybirdnet"
 
 # Default value for :scm is :git
 # set :scm, :git
