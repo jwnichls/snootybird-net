@@ -15,6 +15,21 @@
 	height: 20vh !important;
 }
 
+.no-padding {
+	padding: 0px !important;
+}
+
+.custom-indicator {
+	height: 5px !important;
+	width: 5px !important;
+	border-color: rgb(119,119,119) !important;
+}
+
+li.active {
+	margin: 1px !important;
+	background-color: rgb(119,119,119) !important;
+}
+
 .navbar-transparent {
 	background-color: transparent;
 	border: 0px;
