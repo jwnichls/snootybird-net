@@ -23,3 +23,7 @@ require 'capistrano/rails/migrations'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
+
+# Ensure the git plugin is loaded
+require "capistrano/scm/git"
+install_plugin Capistrano::SCM::Git
