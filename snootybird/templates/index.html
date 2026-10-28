@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snooty Bird Publishing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:url" content="http://snootybird.net/"/>
+  <meta property="og:title" content="Snooty Bird Publishing"/>
+  <meta property="og:description" content="Self-published cocktail books of the highest quality. Drink inspired."/>
+  <meta property="og:image" content="{{ url_for('static', filename='images/snooty-bird-circle-large.png', _external=True) }}"/>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/snootybird.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='js/snootybird.js') }}"></script>
+</head>
+<body class="title-body">
+
+	<div class="jumbotron drink-title browser-height" style="height: 100%;">
+
+		<div class="navbar navbar-default navbar-transparent" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+		      		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+					</button>
+		      	</div>
+		      	<div class="collapse navbar-collapse" id="navbar-collapse">
+			        <ul class="nav navbar-nav pull-right">
+						<li><a href="http://blog.whatdididrink.com/">Blog</a></li>
+						<li><a href="https://www.amazon.com/What-We-Drink-collection-cocktail/dp/0991403606/">Buy our Book!</a></li>
+					</ul>
+				</div>
+		    </div>
+		</div>
+
+		<div class="container">
+			<div class="one-tenth-height"></div>
+			<div>
+				<img src="{{ url_for('static', filename='images/snooty-bird-circle-medium.png') }}" class="image-center" alt="Snooty Bird">
+			</div>
+			<div>
+				<p class="title-text">Snooty Bird</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container browser-height">
+		<div class="row rowspace50">
+			<div class="col-md-6">
+				<img src="{{ url_for('static', filename='images/cover-image-medium.jpg') }}" class="img-responsive" alt="What We Drink cover">
+				<p class="spaced" style="text-align: center;">
+					<a href="https://www.amazon.com/What-We-Drink-collection-cocktail/dp/0991403606/" class="btn btn-primary" role="button">Buy the Book on Amazon!</a>
+				</p>
+			</div>
+			<div class="col-md-6">
+				<h3 class="text-center">a book for the cocktail enthusiast...</h3>
+
+				<p class="spaced">
+					We've been obsessed with cocktails for a long time. We go out to craft cocktail bars, we make cocktails at home, and of course we throw cocktail parties for our friends.  One of the biggest questions we get from our friends is, 
+				</p>
+
+				<p class="spaced">
+					<em><b>"How can I make a great cocktail at home?"</b></em>
+				</p>
+
+				<p class="spaced">
+					Of course, there are plenty of amazing cocktail books out there already, and in the past we've recommended a variety of them to our friends when we're asked this question.  But we've also found that many of the existing books don't work well for the novice that is just getting started.
+				</p> 
+					
+				<p class="spaced">
+					We spent more than a year testing recipes and instructions with friends, all to put together a book that we think clearly and simply describes the basics of making a great cocktail.
+				</p>
+
+				<p class="spaced">
+					We chose just 20 recipes, most of which are classics, but collectively demonstrate a broad cross-section of the world of cocktails. We introduce cocktail making technique progressively through each recipe, so readers don't have to read through a bunch of text before starting to make a drink. We also expose readers to basic cocktail theory through the recipes. For example, many people don't realize that sweetness can be countered with acidity, so if you accidentally put too much sugar in your cocktail, you can easily fix it by adding some lemon juice.
+				</p>
+
+				<p class="spaced">
+					The book is as beautiful as it is functional. Each cocktail is accompanied by a full page high quality photograph. It's a book that looks as good lying on a coffee table in your living room as it will it in the kitchen or on your home bar.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid no-padding rowspace50">
+		<div id="book-carousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#book-carousel" data-slide-to="0" class="active custom-indicator"></li>
+				{% for num in spread_pages %}
+					<li data-target="#book-carousel" data-slide-to="{{ num }}" class="custom-indicator"></li>
+				{% endfor %}
+			</ol>
+			
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="{{ url_for('static', filename='images/cover-image-300.jpg') }}" class="image-center" alt="What We Drink cover">
+				</div>
+				{% for num in spread_pages %}
+				<div class="item">
+					<img src="{{ url_for('static', filename='images/spreads/whatwedrink-fullspread_Page_%d.png' % num) }}" class="image-center" alt="Book page {{ num }}">
+				</div>
+				{% endfor %}
+			</div>
+			
+			<a class="left carousel-control" href="#book-carousel" role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#book-carousel" role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+		</div>
+	</div>
+	
+	<div class="footer" id="footer">
+		<div class="footer-content container">
+			<div class="col-md-6">
+				<p><small>Copyright &copy; 2016, Snooty Bird, LLC</small></p>
+			</div>
+			<div class="col-md-6 text-right">
+				<p><small>For questions and information, please contact <a href="mailto:jeff@jeffreynichols.com">Jeff</a>.</small></p>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
