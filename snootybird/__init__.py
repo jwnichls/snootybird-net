@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_from_directory
+from flask import Flask, redirect, render_template, request, send_from_directory
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 # The book carousel shows the cover followed by these spread pages
@@ -13,6 +13,13 @@ def create_app(test_config=None):
     # Heroku's router terminates TLS, so trust its forwarded scheme and host
     # when building absolute URLs (e.g. the og:image meta tag)
     app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
+
+    # Heroku doesn't redirect plain HTTP itself; its router marks those
+    # requests, so send them to HTTPS (local development has no such header)
+    @app.before_request
+    def redirect_to_https():
+        if request.headers.get("X-Forwarded-Proto") == "http":
+            return redirect(request.url.replace("http://", "https://", 1), code=301)
 
     @app.route("/")
     def index():

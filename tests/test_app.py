@@ -32,6 +32,18 @@ def test_every_referenced_static_file_exists(client):
         assert client.get(path).status_code == 200, path
 
 
+@pytest.mark.parametrize("path", ["/", "/robots.txt?x=1"])
+def test_plain_http_from_heroku_router_redirects_to_https(client, path):
+    response = client.get(path, headers={"X-Forwarded-Proto": "http", "X-Forwarded-Host": "www.snootybird.net"})
+    assert response.status_code == 301
+    assert response.headers["Location"] == f"https://www.snootybird.net{path}"
+
+
+def test_https_and_local_requests_are_not_redirected(client):
+    assert client.get("/", headers={"X-Forwarded-Proto": "https"}).status_code == 200
+    assert client.get("/").status_code == 200
+
+
 @pytest.mark.parametrize("path", ["/favicon.ico", "/robots.txt"])
 def test_root_static_files(client, path):
     assert client.get(path).status_code == 200
