@@ -1,23 +1,21 @@
 # snootybird.net
 
-The Snooty Bird Publishing website: a single page about the book *What We
-Drink*. It is a small Flask app, deployed to Heroku on the `heroku-26` stack.
+The Snooty Bird Publishing website: a single static page about the book *What We
+Drink*, served by GitHub Pages at https://www.snootybird.net.
 
 ## Development
 
+The site is the `site/` folder: `index.html` and the files it uses (`static/`).
+To look at it locally:
+
 ```sh
-uv sync
-uv run flask --app snootybird run --debug
-uv run pytest
+python3 -m http.server -d site 8000     # then open http://localhost:8000
+python3 -m unittest discover -s tests   # every file the page refers to is there
 ```
 
 ## Deployment
 
-Heroku's Python buildpack installs from `uv.lock`, uses the Python version in
-`.python-version`, and runs the `web` process in `Procfile`.
-
-```sh
-heroku create snootybird --stack heroku-26   # or, for an existing app:
-heroku stack:set heroku-26 -a <app>
-git push heroku main
-```
+Pushing to `main` runs `.github/workflows/pages.yml`: it checks the site, then
+publishes `site/` to GitHub Pages (Settings → Pages → Source: GitHub Actions,
+custom domain www.snootybird.net with Enforce HTTPS). DNS: `www` is a CNAME to
+`jwnichls.github.io`; the bare domain forwards to `https://www.snootybird.net`.
